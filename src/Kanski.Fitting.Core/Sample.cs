@@ -18,12 +18,12 @@ namespace Kanski.Fitting.Core
             var crossover = new UniformCrossover(0.5f);
             var mutation = new FlipBitMutation();
             var chromosome = new FloatingPointChromosome(
-                new double[] { 0, 0 },
-                new double[] { 2, 2 },
-                new int[] { 63, 63 },
-                new int[] { 17, 17 }
+                new double[] { 0, 0, 0 },
+                new double[] { 20, 2, 10 },
+                new int[] { 63, 63, 17 },
+                new int[] { 10, 17, 4 }
             );
-            var population = new Population(500, 700, chromosome);
+            var population = new Population(900, 999, chromosome);
             var fitness = new FuncFitness(ProblemDomain.Fitness);
 
             var ga = new GeneticAlgorithm(population, fitness, selection, crossover, mutation);
@@ -33,7 +33,7 @@ namespace Kanski.Fitting.Core
             ga.CrossoverProbability = 0.7f;
 
 
-            ga.GenerationRan += (s,a) =>
+            ga.GenerationRan += (s, a) =>
             {
                 if (0 == ga.GenerationsNumber % 100)
                 {
