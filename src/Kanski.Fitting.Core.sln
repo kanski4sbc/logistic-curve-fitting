@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanski.Fitting.Core", "Kanski.Fitting.Core\Kanski.Fitting.Core.csproj", "{80BDAC33-64A8-4464-A5F2-8655A8A28D51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanski.Fitting.Core", "Kanski.Fitting.Core\Kanski.Fitting.Core.csproj", "{80BDAC33-64A8-4464-A5F2-8655A8A28D51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanski.Fitting.Console", "Kanski.Fitting.Console\Kanski.Fitting.Console.csproj", "{4FD6C145-BE87-4F0E-8D10-BF8A389864B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{80BDAC33-64A8-4464-A5F2-8655A8A28D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80BDAC33-64A8-4464-A5F2-8655A8A28D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80BDAC33-64A8-4464-A5F2-8655A8A28D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD6C145-BE87-4F0E-8D10-BF8A389864B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD6C145-BE87-4F0E-8D10-BF8A389864B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD6C145-BE87-4F0E-8D10-BF8A389864B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD6C145-BE87-4F0E-8D10-BF8A389864B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

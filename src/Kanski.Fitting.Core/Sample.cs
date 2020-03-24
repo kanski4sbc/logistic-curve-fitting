@@ -2,9 +2,9 @@
 
 namespace Kanski.Fitting.Core
 {
-    static class Program
+    public static class Sample
     {
-        static void Main(string[] args)
+        public static void Test()
         {
             Console.WriteLine("Hello World!");
         }
