@@ -1,2 +1,2 @@
 # logistic-curve-fitting
-Fitting the logistic curve for given data
+Fitting the logistic curve for given data using genetic algorithm
