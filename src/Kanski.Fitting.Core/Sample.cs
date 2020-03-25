@@ -18,11 +18,13 @@ namespace Kanski.Fitting.Core
             var crossover = new UniformCrossover(0.5f);
             var mutation = new FlipBitMutation();
             var chromosome = new FloatingPointChromosome(
-                new double[] { 0, 0, 0 },
-                new double[] { 20, 2, 10 },
-                new int[] { 63, 63, 17 },
-                new int[] { 10, 17, 4 }
+                new double[] { 0, 0, 20 },
+                new double[] { 50000, 1, 50 },
+                new int[] { 32, 63, 19 },
+                new int[] { 0, 17, 4 }
             );
+            //L, k, x0
+
             var population = new Population(900, 999, chromosome);
             var fitness = new FuncFitness(ProblemDomain.Fitness);
 
