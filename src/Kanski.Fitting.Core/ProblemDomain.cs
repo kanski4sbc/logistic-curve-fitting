@@ -7,7 +7,7 @@ namespace Kanski.Fitting.Core
 {
     public static class ProblemDomain
     {
-        private static readonly int[] Observations = new int[] { 1, 1, 5, 6, 11, 17, 22, 31, 51, 68, 104, 125, 177, 238, 287, 355, 425, 536, 634, 749, 890 };
+        private static readonly int[] Observations = new int[] { 1, 1, 5, 6, 11, 17, 22, 31, 51, 68, 104, 125, 177, 238, 287, 355, 425, 536, 634, 749, 901, 1051 };
 
         public static (double L, double k, double x0) ToPoint(this IChromosome chromosome)
         {
@@ -17,11 +17,17 @@ namespace Kanski.Fitting.Core
             return (L: values[0], k: values[1], x0: values[2]);
         }
 
-        public static double Fitness(this IChromosome chromosome)
+        public static Func<IChromosome, double> Fitness()
         {
-            (var L, var k, var x0) = chromosome.ToPoint();
-            var f = BuildLogisticFunction(L, k, x0);
-            return 1 / Observations.Select((obs, n) => Math.Pow(f(n) - obs, 2.0)).Sum();
+            var avg = Observations.Average();
+            var denom = Observations.Select(x => Math.Pow(x - avg, 2.0)).Sum();
+
+            return chromosome =>
+            {
+                (var L, var k, var x0) = chromosome.ToPoint();
+                var f = BuildLogisticFunction(L, k, x0);
+                return denom / Observations.Select((obs, n) => Math.Pow(f(n) - obs, 2.0)).Sum();
+            };
         }
 
         private static Func<int, double> BuildLogisticFunction(double L, double k, double x0)
