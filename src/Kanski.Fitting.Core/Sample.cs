@@ -19,7 +19,7 @@ namespace Kanski.Fitting.Core
             var mutation = new PartialShuffleMutation();
             var chromosome = new FloatingPointChromosome(
                 new double[] { 1000, 0, 22 },
-                new double[] { 100000, 10, 50 },
+                new double[] { 100000, 1, 50 },
                 new int[] { 32, 63, 19 },
                 new int[] { 0, 17, 4 }
             );

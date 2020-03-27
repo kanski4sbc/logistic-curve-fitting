@@ -7,7 +7,7 @@ namespace Kanski.Fitting.Core
 {
     public static class ProblemDomain
     {
-        private static readonly int[] Observations = new int[] { 1, 1, 5, 6, 11, 17, 22, 31, 51, 68, 104, 125, 177, 238, 287, 355, 425, 536, 634, 749, 901, 1051 };
+        private static readonly int[] Observations = new int[] { 1, 1, 5, 6, 11, 17, 22, 31, 50, 66, 88, 109, 160, 220, 269, 337, 407, 518, 614, 728, 890, 1030, 1198 };
 
         public static (double L, double k, double x0) ToPoint(this IChromosome chromosome)
         {
