@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Kanski.Fitting.Core;
 
-namespace Kanski.Fitting.Core
+namespace Kanski.Fitting.Console
 {
     static class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Sample.Test();
         }
     }
 }
