@@ -12,7 +12,7 @@ namespace Kanski.Fitting.Core
 {
     public static class Sample
     {
-        public static void Test()
+        public static void Compute()
         {
             var selection = new EliteSelection();
             var crossover = new UniformCrossover(0.5f);
@@ -35,21 +35,16 @@ namespace Kanski.Fitting.Core
             ga.CrossoverProbability = 0.7f;
 
 
-            ga.GenerationRan += (s, a) =>
-            {
-                if (0 == ga.GenerationsNumber % 10)
-                {
-                    Console.WriteLine("Best solution so far {0} for {1}", ga.BestChromosome.Fitness, ga.BestChromosome.ToPoint());
-                }
+            //ga.GenerationRan += (s, a) =>
+            //{
+            //    if (0 == ga.GenerationsNumber % 10)
+            //    {
+            //        Console.WriteLine("Best solution so far {0} for {1}", ga.BestChromosome.Fitness, ga.BestChromosome.ToPoint());
+            //    }
+            //};
 
-            };
-
-            Console.WriteLine("GA running...");
             ga.Start();
-
-
-            Console.WriteLine("Best solution found has {0} fitness for {1}", ga.BestChromosome.Fitness, ga.BestChromosome.ToPoint());
-
+            Console.WriteLine("Best {0} for {1}", ga.BestChromosome.Fitness, ga.BestChromosome.ToPoint());
         }
 
     }

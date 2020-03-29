@@ -6,7 +6,11 @@ namespace Kanski.Fitting.Console
     {
         static void Main(string[] args)
         {
-            Sample.Test();
+            for (var i = 0; i < 10; i++)
+            {
+                System.Console.WriteLine("running " + i);
+                Sample.Compute();
+            }
         }
     }
 }
