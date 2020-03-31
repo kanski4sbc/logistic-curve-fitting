@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Kanski.Fitting.Console": {
+      "commandName": "Executable"
+    }
+  }
+}
